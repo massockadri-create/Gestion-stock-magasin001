@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gestion Cahiers — Librairie</title>
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+<!-- ===== Écran de connexion ===== -->
+<div id="login-screen">
+  <div class="login-card">
+    <div class="brand-mark">C</div>
+    <h1>Gestion des Cahiers</h1>
+    <p class="sub">Stock, entrées/sorties, facturation — Librairie &amp; Papeterie</p>
+    <form id="login-form">
+      <input type="email" id="login-email" placeholder="Adresse e-mail" required autocomplete="username">
+      <input type="password" id="login-password" placeholder="Mot de passe" required autocomplete="current-password">
+      <button class="btn" type="submit" style="width:100%; justify-content:center; padding:10px;">Se connecter</button>
+      <div class="login-error" id="login-error"></div>
+    </form>
+  </div>
+</div>
+
+<!-- ===== Application ===== -->
+<div id="app-screen">
+  <div class="topbar">
+    <button id="menu-toggle" aria-label="Menu">☰</button>
+    <strong id="topbar-title" style="font-family: var(--font-display)">Tableau de bord</strong>
+    <button id="menu-close" style="visibility:hidden">✕</button>
+  </div>
+
+  <aside class="sidebar" id="sidebar">
+    <div class="brand">
+      <div class="mark">C</div>
+      <div><strong>Gestion Cahiers</strong><span>Librairie &amp; Papeterie</span></div>
+    </div>
+    <nav id="nav-list"></nav>
+    <div class="user-box">
+      <div id="user-name">—</div>
+      <span class="role-badge" id="user-role">—</span><br>
+      <button class="logout-btn" id="logout-btn">Se déconnecter</button>
+    </div>
+  </aside>
+
+  <main class="main" id="main-content">
+    <!-- Le contenu de chaque page est injecté ici par app.js -->
+  </main>
+</div>
+
+<div id="toast-root"></div>
+
+<script src="/js/app.js"></script>
+</body>
+</html>
